@@ -89,7 +89,7 @@ nav{
 @keyframes hglow{0%,100%{box-shadow:0 0 100px rgba(26,86,219,0.35),0 0 50px rgba(26,86,219,0.15) inset,0 40px 80px rgba(0,0,0,0.6);}50%{box-shadow:0 0 140px rgba(59,130,246,0.5),0 0 70px rgba(26,86,219,0.2) inset,0 40px 80px rgba(0,0,0,0.6);}}
 .hphoto::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(59,130,246,0.35),transparent 60%);}
 .hphoto::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,rgba(2,5,15,0.5),transparent);}
-.pfig{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:220px;animation:float 7s ease-in-out infinite;}
+.pfig{position:absolute;bottom:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;animation:float 7s ease-in-out infinite;}
 @keyframes float{0%,100%{transform:translateX(-50%) translateY(0px);}50%{transform:translateX(-50%) translateY(-14px);}}
 .photo-badge{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;background:rgba(6,13,30,0.85);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:12px;padding:8px 16px;white-space:nowrap;font-size:11px;font-weight:600;color:var(--pl2);display:flex;align-items:center;gap:6px;}
 .photo-badge::before{content:'✦';color:var(--pl);font-size:9px;}
