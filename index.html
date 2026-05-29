@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frank Alberca — Ingeniero de Software con IA · Ciberseguridad & Desarrollo Web</title>
+
+<!-- SEO -->
+<meta name="description" content="Frank Alberca — Ingeniero de Software con Inteligencia Artificial y estudiante de la carrera de Ciberseguridad. Desarrollo sitios web y sistemas full-stack a medida: portales educativos, plataformas de gestión empresarial, municipal y logística. Callao, Perú.">
+<meta name="keywords" content="Frank Alberca, desarrollador web, full-stack, Python, PHP, MySQL, WordPress, ciberseguridad, diseño web, SENATI, Perú, portafolio, programador, freelance">
+<meta name="author" content="Frank Alberca">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#070710">
+<link rel="canonical" href="https://institutoipse.edu.pe/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Frank Alberca — Ingeniero de Software con IA y Ciberseguridad">
+<meta property="og:description" content="Ingeniero de Software con IA · Ciberseguridad. Desarrollo sitios web y sistemas full-stack a medida.">
+<meta property="og:image" content="foto-perfil.png">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="Frank Alberca · Portafolio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frank Alberca — Ingeniero de Software con IA y Ciberseguridad">
+<meta name="twitter:description" content="Ingeniero de Software con IA · Ciberseguridad. Desarrollo web y sistemas full-stack. Portafolio profesional.">
+<meta name="twitter:image" content="foto-perfil.png">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%238b5cf6'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23070710'/><text x='50' y='73' font-size='62' font-family='Georgia,serif' font-style='italic' font-weight='700' fill='url(%23g)' text-anchor='middle'>F</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#070710;
+  --bg2:#0a0a18;
+  --violet:#a78bfa;
+  --violet2:#8b5cf6;
+  --cyan:#22d3ee;
+  --blue:#3b82f6;
+  --pink:#f472b6;
+  --grad:linear-gradient(135deg,#8b5cf6,#22d3ee);
+  --grad2:linear-gradient(135deg,#a78bfa,#22d3ee 55%,#f472b6);
+  --text:#eef0fb;
+  --text2:#c3c7de;
+  --muted:#7e82a0;
+  --muted2:#565a78;
+  --glass:rgba(255,255,255,0.04);
+  --glass2:rgba(255,255,255,0.06);
+  --gb:rgba(255,255,255,0.09);
+  --gb2:rgba(255,255,255,0.05);
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none;line-height:1.6;-webkit-font-smoothing:antialiased;}
+::selection{background:rgba(139,92,246,0.35);color:#fff;}
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--violet2),var(--cyan));border-radius:8px;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px;}
+
+/* ── Aurora background ── */
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.55;transition:transform 1.2s ease;}
+.b1{width:620px;height:620px;background:radial-gradient(circle,#6d28d9,transparent 70%);top:-180px;left:-150px;}
+.b2{width:520px;height:520px;background:radial-gradient(circle,#0e7490,transparent 70%);top:30%;right:-160px;}
+.b3{width:440px;height:440px;background:radial-gradient(circle,#9d174d,transparent 70%);bottom:-120px;left:25%;opacity:.4;}
+.b4{width:360px;height:360px;background:radial-gradient(circle,#1d4ed8,transparent 70%);top:55%;left:-100px;opacity:.4;}
+.grid-overlay{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 75% 75% at 50% 40%,#000 10%,transparent 100%);
+  mask-image:radial-gradient(ellipse 75% 75% at 50% 40%,#000 10%,transparent 100%);
+}
+.noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+main,nav,footer{position:relative;z-index:2;}
+
+/* ── Cursor ── */
+#c1{position:fixed;width:7px;height:7px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
+#c2{position:fixed;width:34px;height:34px;border:1px solid rgba(167,139,250,0.6);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,background .25s;}
+
+/* ── Progress bar ── */
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--grad2);z-index:1000;width:0;border-radius:0 3px 3px 0;box-shadow:0 0 12px rgba(34,211,238,0.6);}
+
+/* ── Skip link ── */
+.skip{position:absolute;left:-999px;top:8px;z-index:1100;background:var(--violet2);color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:13px;}
+.skip:focus{left:16px;}
+
+/* ── Glass helper ── */
+.glass{background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
+
+/* ── Nav ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:14px 56px;background:rgba(7,7,16,0.55);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--gb2);}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;letter-spacing:-.5px;display:flex;align-items:center;gap:2px;}
+.logo .dot{width:8px;height:8px;border-radius:50%;background:var(--grad);margin-left:3px;box-shadow:0 0 12px var(--cyan);}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{color:var(--muted);font-size:13px;font-weight:500;letter-spacing:.3px;transition:color .25s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--grad);border-radius:2px;transition:width .35s cubic-bezier(.4,0,.2,1);}
+.nav-links a:hover,.nav-links a.active{color:var(--text);}
+.nav-links a.active::after,.nav-links a:hover::after{width:100%;}
+.nav-cta{background:var(--grad);color:#0a0a18;padding:9px 20px;border-radius:30px;font-size:13px;font-weight:700;letter-spacing:.2px;box-shadow:0 6px 24px rgba(139,92,246,0.35);transition:transform .3s,box-shadow .3s;display:inline-flex;align-items:center;gap:6px;}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(34,211,238,0.45);}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:none;padding:6px;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+
+/* ── Section base ── */
+.sec{padding:110px 56px;position:relative;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px;}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--cyan);}
+.sh{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,5vw,52px);font-weight:600;line-height:1.05;letter-spacing:-1.5px;margin-bottom:14px;}
+.sh .grad{background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.sh .ital{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;}
+.sh-sub{color:var(--muted);font-size:15px;max-width:560px;}
+.center{text-align:center;}
+.center .eyebrow{justify-content:center;}
+.center .eyebrow::after{content:'';width:22px;height:1px;background:var(--cyan);}
+.center .sh-sub{margin-left:auto;margin-right:auto;}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:32px;font-size:14px;font-weight:600;cursor:none;transition:transform .3s,box-shadow .3s,background .3s,border-color .3s;border:1px solid transparent;}
+.btn-grad{background:var(--grad);color:#0a0a18;box-shadow:0 10px 32px rgba(139,92,246,0.35);}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(34,211,238,0.45);}
+.btn-ghost{background:var(--glass);border:1px solid var(--gb);color:var(--text2);}
+.btn-ghost:hover{border-color:var(--violet);color:var(--text);background:var(--glass2);transform:translateY(-3px);}
+.btn svg{transition:transform .3s;}
+.btn:hover svg{transform:translateX(3px);}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px;padding:140px 56px 80px;}
+.h-badge{display:inline-flex;align-items:center;gap:9px;padding:7px 16px;border-radius:30px;font-size:12.5px;font-weight:500;color:var(--text2);margin-bottom:26px;}
+.h-badge .pulse{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 2s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.6);}70%{box-shadow:0 0 0 10px rgba(52,211,153,0);}100%{box-shadow:0 0 0 0 rgba(52,211,153,0);}}
+.h-name{font-family:'Space Grotesk',sans-serif;font-size:clamp(48px,8.5vw,104px);font-weight:600;line-height:.92;letter-spacing:-3px;margin-bottom:10px;}
+.h-name .l2{background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.h-role{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,3vw,30px);color:var(--text2);margin-bottom:22px;font-weight:500;}
+.h-role b{font-style:normal;font-family:'Inter';font-weight:600;color:var(--cyan);}
+.h-desc{color:var(--muted);font-size:15.5px;max-width:480px;margin-bottom:32px;}
+.h-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
+.h-socials{display:flex;gap:12px;}
+.soc{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all .3s cubic-bezier(.4,0,.2,1);}
+.soc:hover{color:#0a0a18;background:var(--grad);transform:translateY(-4px);box-shadow:0 8px 22px rgba(34,211,238,0.4);}
+
+.h-visual{display:flex;justify-content:center;position:relative;}
+.hphoto{width:300px;height:420px;border-radius:30px;overflow:hidden;position:relative;border:1px solid var(--gb);background:linear-gradient(170deg,rgba(139,92,246,.18),rgba(34,211,238,.08));box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 60px rgba(139,92,246,.2);animation:floaty 6s ease-in-out infinite;}
+@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-16px);}}
+.hphoto img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.hphoto::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,16,.55),transparent 45%);}
+.h-chip{position:absolute;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(10,10,24,.7);border:1px solid var(--gb);border-radius:16px;padding:11px 16px;display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;box-shadow:0 12px 30px rgba(0,0,0,.4);animation:floaty 6s ease-in-out infinite;}
+.h-chip .ico{width:30px;height:30px;border-radius:9px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.h-chip small{display:block;font-size:10px;color:var(--muted);font-weight:500;}
+.chip-1{top:34px;left:-30px;animation-delay:.6s;}
+.chip-2{bottom:50px;right:-36px;animation-delay:1.2s;}
+
+/* ── Marquee ── */
+.marquee{overflow:hidden;padding:22px 0;border-top:1px solid var(--gb2);border-bottom:1px solid var(--gb2);background:rgba(255,255,255,.015);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);}
+.marquee-track{display:flex;gap:54px;white-space:nowrap;width:max-content;animation:scroll 26s linear infinite;}
+.marquee-track span{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:500;color:var(--muted);display:inline-flex;align-items:center;gap:54px;}
+.marquee-track span::after{content:'✦';color:var(--violet);font-size:13px;}
+@keyframes scroll{to{transform:translateX(-50%);}}
+
+/* ── ABOUT ── */
+.about{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:center;}
+.ap-wrap{position:relative;}
+.ap{width:100%;aspect-ratio:4/5;border-radius:26px;overflow:hidden;border:1px solid var(--gb);box-shadow:0 30px 70px rgba(0,0,0,.5);}
+.ap img{width:100%;height:100%;object-fit:cover;}
+.ap-glow{position:absolute;inset:-20px;border-radius:30px;background:var(--grad);filter:blur(50px);opacity:.25;z-index:-1;}
+.stat-row{display:flex;gap:18px;margin-top:34px;flex-wrap:wrap;}
+.stat{flex:1;min-width:120px;padding:20px;border-radius:18px;}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:600;line-height:1;background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.stat-label{font-size:11.5px;color:var(--muted);margin-top:6px;font-weight:500;letter-spacing:.3px;}
+.about p{color:var(--text2);font-size:15.5px;margin-bottom:18px;}
+.about p.lead{color:var(--text);font-size:17px;}
+
+/* ── PROJECTS ── */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.pcard{border-radius:22px;overflow:hidden;position:relative;transition:transform .4s cubic-bezier(.4,0,.2,1),border-color .4s,box-shadow .4s;cursor:none;display:flex;flex-direction:column;}
+.pcard:hover{transform:translateY(-10px);border-color:rgba(167,139,250,.4);box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 50px rgba(139,92,246,.12);}
+.pthumb{height:170px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.pt1{background:linear-gradient(135deg,#2e1065,#0c4a6e);}
+.pt2{background:linear-gradient(135deg,#0c4a6e,#155e75);}
+.pt3{background:linear-gradient(135deg,#1e1b4b,#312e81);}
+.pt4{background:linear-gradient(135deg,#164e63,#0e7490);}
+.pt5{background:linear-gradient(135deg,#4a044e,#581c87);}
+.pt6{background:linear-gradient(135deg,#0f766e,#1e3a8a);}
+.pthumb-ico{font-size:46px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .4s;}
+.pcard:hover .pthumb-ico{transform:scale(1.15) rotate(-4deg);}
+.pthumb::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,rgba(255,255,255,.12),transparent 60%);}
+.plink{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(10,10,24,.55);border:1px solid var(--gb);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;transition:.3s;z-index:2;}
+.pcard:hover .plink{background:var(--grad);color:#0a0a18;}
+.pbadge{position:absolute;top:14px;left:14px;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:5px 11px;border-radius:20px;background:rgba(10,10,24,.6);border:1px solid var(--gb);backdrop-filter:blur(8px);color:var(--cyan);z-index:2;}
+.pbody{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;}
+.pnum{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:var(--muted2);margin-bottom:6px;}
+.ptitle{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;margin-bottom:8px;letter-spacing:-.3px;}
+.purl{font-size:11.5px;color:var(--cyan);font-weight:500;margin-bottom:12px;}
+.ptech{font-size:12.5px;color:var(--muted);margin-top:auto;}
+
+/* ── EXPERIENCE ── */
+.etabs{display:inline-flex;gap:6px;padding:6px;border-radius:30px;margin-bottom:46px;}
+.etab{padding:9px 22px;border-radius:24px;font-size:13px;font-weight:600;cursor:none;border:none;background:transparent;color:var(--muted);transition:.3s;}
+.etab.on{background:var(--grad);color:#0a0a18;box-shadow:0 6px 20px rgba(139,92,246,.35);}
+.etab:not(.on):hover{color:var(--text);}
+.tline{position:relative;padding-left:40px;}
+.tline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--violet2),rgba(34,211,238,.15));}
+.titem{position:relative;margin-bottom:34px;padding:24px 26px;border-radius:18px;transition:transform .3s,border-color .3s;}
+.titem:hover{transform:translateX(6px);border-color:rgba(167,139,250,.35);}
+.tdot{position:absolute;left:-40px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--grad);border:3px solid var(--bg);box-shadow:0 0 16px rgba(34,211,238,.6);}
+.thead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:8px;}
+.trole{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600;}
+.tco{font-size:12.5px;color:var(--cyan);font-weight:500;margin-top:3px;}
+.tyr{font-size:12px;font-weight:600;color:var(--muted);padding:5px 13px;border-radius:20px;background:var(--glass);border:1px solid var(--gb);white-space:nowrap;}
+.tdesc{font-size:13.5px;color:var(--muted);}
+
+/* ── SERVICES ── */
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.scard{padding:32px;border-radius:22px;position:relative;overflow:hidden;transition:transform .35s,border-color .35s;cursor:none;}
+.scard:hover{transform:translateY(-6px);border-color:rgba(167,139,250,.4);}
+.scard::before{content:'';position:absolute;top:-40%;right:-10%;width:200px;height:200px;background:var(--grad);opacity:0;filter:blur(60px);transition:opacity .4s;border-radius:50%;}
+.scard:hover::before{opacity:.18;}
+.sicon{width:54px;height:54px;border-radius:16px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:18px;box-shadow:0 10px 28px rgba(139,92,246,.4);position:relative;z-index:1;}
+.stitle{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin-bottom:10px;position:relative;z-index:1;}
+.sdesc{font-size:13.5px;color:var(--muted);margin-bottom:18px;position:relative;z-index:1;}
+.stags{display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:1;}
+.tag{font-size:11px;font-weight:500;padding:5px 13px;border-radius:20px;background:var(--glass2);border:1px solid var(--gb);color:var(--text2);}
+
+/* ── SKILLS ── */
+.skwrap{display:grid;grid-template-columns:1fr 1fr;gap:24px 56px;max-width:860px;margin:0 auto;}
+.skitem{margin-bottom:22px;}
+.skhead{display:flex;justify-content:space-between;margin-bottom:9px;font-size:13.5px;}
+.skhead b{font-weight:600;}
+.skhead span{color:var(--cyan);font-weight:600;}
+.skbar{height:7px;border-radius:7px;background:rgba(255,255,255,.06);overflow:hidden;}
+.skfill{height:100%;width:0;background:var(--grad);border-radius:7px;transition:width 1.4s cubic-bezier(.4,0,.2,1);}
+.chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:50px;max-width:780px;margin-left:auto;margin-right:auto;}
+.chip{display:flex;align-items:center;gap:11px;padding:13px 20px;border-radius:16px;transition:transform .25s,border-color .25s;cursor:none;}
+.chip:hover{transform:translateY(-4px);border-color:rgba(167,139,250,.4);}
+.chip span{font-size:22px;}
+.chip b{font-size:13px;font-weight:600;display:block;}
+.chip small{font-size:10.5px;color:var(--muted);}
+
+/* ── PROCESS ── */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.step{padding:30px 26px;border-radius:20px;position:relative;transition:transform .35s,border-color .35s;}
+.step:hover{transform:translateY(-6px);border-color:rgba(167,139,250,.4);}
+.step-n{font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;line-height:1;background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.5;margin-bottom:14px;}
+.step h3{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600;margin-bottom:9px;}
+.step p{font-size:13px;color:var(--muted);}
+
+/* ── FAQ ── */
+.faq{max-width:760px;margin:0 auto;}
+.faq-item{border-radius:16px;margin-bottom:14px;overflow:hidden;transition:border-color .3s;}
+.faq-item.open{border-color:rgba(167,139,250,.4);}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--text);font-family:'Inter';font-size:15.5px;font-weight:600;padding:22px 24px;cursor:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q .pm{width:26px;height:26px;border-radius:50%;background:var(--glass2);border:1px solid var(--gb);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .3s,background .3s;}
+.faq-item.open .pm{transform:rotate(45deg);background:var(--grad);color:#0a0a18;border-color:transparent;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-a p{padding:0 24px 22px;color:var(--muted);font-size:14px;}
+
+/* ── TESTIMONIALS ── */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.tcard{padding:26px;border-radius:20px;position:relative;transition:transform .35s,border-color .35s;}
+.tcard:hover{transform:translateY(-6px);border-color:rgba(167,139,250,.4);}
+.tquote{font-family:'Cormorant Garamond',serif;font-size:64px;line-height:.6;color:rgba(167,139,250,.25);position:absolute;top:24px;right:22px;}
+.tstars{color:#fbbf24;font-size:13px;letter-spacing:2px;margin-bottom:14px;}
+.ttxt{font-size:13.5px;color:var(--text2);margin-bottom:18px;position:relative;z-index:1;}
+.thead{display:flex;align-items:center;gap:12px;}
+.tav{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:15px;color:#0a0a18;flex-shrink:0;}
+.tname{font-size:14px;font-weight:600;}
+.trole2{font-size:11.5px;color:var(--muted);}
+
+/* ── CONTACT ── */
+.cwrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start;}
+.cinfo h2{font-family:'Space Grotesk';font-size:clamp(30px,4vw,46px);font-weight:600;letter-spacing:-1.5px;line-height:1.05;margin-bottom:16px;}
+.cinfo h2 .grad{background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.cinfo>p{color:var(--muted);font-size:15px;margin-bottom:28px;}
+.cline{display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid var(--gb2);}
+.cline:last-child{border-bottom:none;}
+.cline .ci{width:42px;height:42px;border-radius:12px;background:var(--glass2);border:1px solid var(--gb);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.cline small{display:block;font-size:11px;color:var(--muted);letter-spacing:.3px;}
+.cline b{font-size:14px;font-weight:500;color:var(--text);}
+.cline a:hover b{color:var(--cyan);}
+.csocials{display:flex;gap:12px;margin-top:24px;}
+
+.cform{padding:34px;border-radius:24px;}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:12.5px;font-weight:600;color:var(--text2);margin-bottom:8px;}
+.field input,.field textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--gb);border-radius:13px;padding:13px 16px;color:var(--text);font-family:'Inter';font-size:14px;transition:border-color .3s,background .3s;cursor:none;}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--violet);background:rgba(255,255,255,.05);}
+.field textarea{resize:vertical;min-height:120px;}
+.field .err{color:#f87171;font-size:11.5px;margin-top:6px;display:none;}
+.field.invalid input,.field.invalid textarea{border-color:#f87171;}
+.field.invalid .err{display:block;}
+.cform .btn-grad{width:100%;justify-content:center;}
+.form-note{font-size:11.5px;color:var(--muted2);text-align:center;margin-top:14px;}
+
+/* ── Footer ── */
+footer{padding:34px 56px;border-top:1px solid var(--gb2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted);}
+footer .fl{font-family:'Space Grotesk';font-weight:600;color:var(--text2);}
+footer .fr{display:flex;gap:8px;align-items:center;}
+footer .fr span{color:var(--cyan);}
+
+/* ── Floating buttons ── */
+.wa-btn{position:fixed;bottom:26px;right:26px;z-index:900;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.5);transition:transform .3s;animation:wapulse 2.6s infinite;}
+@keyframes wapulse{0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.5);}50%{box-shadow:0 10px 40px rgba(37,211,102,.8),0 0 0 8px rgba(37,211,102,.1);}}
+.wa-btn:hover{transform:scale(1.1);}
+.totop{position:fixed;bottom:92px;right:26px;z-index:900;width:46px;height:46px;border-radius:50%;background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;color:var(--text);font-size:18px;cursor:none;opacity:0;visibility:hidden;transform:translateY(12px);transition:.35s;}
+.totop.show{opacity:1;visibility:visible;transform:translateY(0);}
+.totop:hover{border-color:var(--violet);color:var(--cyan);}
+
+/* ── Reveal ── */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);}
+.rv.on{opacity:1;transform:translateY(0);}
+.rv-d1{transition-delay:.1s;}.rv-d2{transition-delay:.2s;}.rv-d3{transition-delay:.3s;}.rv-d4{transition-delay:.4s;}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width:1024px){
+  nav{padding:13px 28px;}
+  .nav-links{gap:22px;}
+  .sec{padding:80px 28px;}
+  .hero{padding:120px 28px 60px;gap:30px;}
+  .about{grid-template-columns:280px 1fr;gap:40px;}
+  .pgrid{grid-template-columns:repeat(2,1fr);}
+  .tgrid{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:768px){
+  nav{padding:12px 20px;}
+  .nav-links{display:none;position:fixed;top:58px;left:0;right:0;flex-direction:column;align-items:center;gap:22px;padding:30px 0;background:rgba(7,7,16,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gb);}
+  .nav-links.open{display:flex;}
+  .nav-links a{font-size:16px;}
+  .hamburger{display:flex;}
+  .sec{padding:70px 20px;}
+  .hero{grid-template-columns:1fr;text-align:center;padding:110px 20px 50px;gap:44px;}
+  .h-visual{order:-1;}
+  .h-badge,.h-cta,.h-socials{justify-content:center;}
+  .h-cta{justify-content:center;}
+  .h-desc{margin-left:auto;margin-right:auto;}
+  .hphoto{width:250px;height:340px;}
+  .chip-1{left:-10px;}.chip-2{right:-10px;}
+  .about{grid-template-columns:1fr;gap:36px;text-align:center;}
+  .ap-wrap{max-width:280px;margin:0 auto;}
+  .stat-row{justify-content:center;}
+  .about .btn,.about .h-cta{margin:0 auto;}
+  .pgrid{grid-template-columns:1fr;}
+  .sgrid{grid-template-columns:1fr;}
+  .skwrap{grid-template-columns:1fr;gap:0;}
+  .steps{grid-template-columns:1fr;}
+  .tgrid{grid-template-columns:1fr;}
+  .cwrap{grid-template-columns:1fr;gap:34px;}
+  .thead{flex-direction:column;}
+  footer{flex-direction:column;text-align:center;}
+}
+@media (max-width:480px){
+  .h-name{letter-spacing:-2px;}
+  .cform{padding:24px;}
+  .sec{padding:60px 16px;}
+  .hero{padding:100px 16px 40px;}
+}
+
+/* Táctiles: cursor normal */
+@media (hover:none),(pointer:coarse){
+  body,a,button,input,textarea,.pcard,.tcard,.scard,.chip,.step,.faq-q,.etab,.totop{cursor:auto;}
+  #c1,#c2{display:none;}
+}
+/* Accesibilidad */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}
+  .rv{opacity:1!important;transform:none!important;}
+  .marquee-track{animation:none!important;}
+}
+</style>
+</head>
+<body>
+
+<a href="#proyectos" class="skip">Saltar al contenido</a>
+
+<div class="aurora">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="blob b4"></div>
+</div>
+<div class="grid-overlay"></div>
+<div class="noise"></div>
+
+<div id="c1" aria-hidden="true"></div>
+<div id="c2" aria-hidden="true"></div>
+<div id="prog"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="logo">Frank<span class="dot"></span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#sobre" onclick="closeMenu()">Sobre mí</a>
+    <a href="#proyectos" onclick="closeMenu()">Proyectos</a>
+    <a href="#experiencia" onclick="closeMenu()">Experiencia</a>
+    <a href="#habilidades" onclick="closeMenu()">Habilidades</a>
+    <a href="#faq" onclick="closeMenu()">FAQ</a>
+    <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="nav-cta" href="Frank_Alberca_CV.pdf" download>↓ Descargar CV</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hl">
+    <div class="h-badge glass rv"><span class="pulse"></span> Disponible para proyectos · Callao, Perú</div>
+    <h1 class="h-name rv rv-d1">
+      <span class="l1">Frank</span><br>
+      <span class="l2">Alberca</span>
+    </h1>
+    <p class="h-role rv rv-d1">Ingeniero de <b>Software con IA</b> · Ciberseguridad</p>
+    <p class="h-desc rv rv-d2">Diseño y construyo sistemas y sitios web full-stack que funcionan en producción, aplicando inteligencia artificial y un enfoque en <b style="color:var(--violet);font-weight:600;">desarrollo seguro</b>.</p>
+    <div class="h-cta rv rv-d2">
+      <a href="#proyectos" class="btn btn-grad">Ver proyectos
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contacto" class="btn btn-ghost">Contáctame</a>
+    </div>
+    <div class="h-socials rv rv-d3">
+      <a class="soc glass" href="https://www.facebook.com/alex.alberca.54" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a class="soc glass" href="https://www.instagram.com/franlevius" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="soc glass" href="https://www.tiktok.com/@frangeazy" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+      </a>
+      <a class="soc glass" href="mailto:fransaguitario2003@gmail.com" aria-label="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="h-visual rv rv-d2">
+    <div class="hphoto">
+      <img src="foto-perfil.png" alt="Frank Alberca, desarrollador web" width="300" height="420" fetchpriority="high">
+    </div>
+    <div class="h-chip chip-1"><div class="ico">🎓</div><div><b>SENATI</b><small>Ing. Software · IA</small></div></div>
+    <div class="h-chip chip-2"><div class="ico">🔐</div><div><b>Ciberseguridad</b><small>Segunda carrera</small></div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>WordPress</span><span>Python</span><span>Java</span><span>C#</span><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML &amp; CSS</span><span>Ciberseguridad</span><span>Diseño Web</span><span>IA</span>
+    <span>WordPress</span><span>Python</span><span>Java</span><span>C#</span><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML &amp; CSS</span><span>Ciberseguridad</span><span>Diseño Web</span><span>IA</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec" id="sobre">
+  <div class="about">
+    <div class="ap-wrap rv">
+      <div class="ap-glow"></div>
+      <div class="ap"><img src="foto-header.png" alt="Frank Alberca" loading="lazy" decoding="async" width="340" height="425"></div>
+    </div>
+    <div class="rv rv-d1">
+      <span class="eyebrow">Sobre mí</span>
+      <h2 class="sh">La creatividad es <span class="ital grad">mi pasión</span></h2>
+      <p class="lead">Soy Frank Alberca, Ingeniero de Software con Inteligencia Artificial (SENATI) y, además, estudio la carrera de Ciberseguridad.</p>
+      <p>Desarrollo sitios web, sistemas full-stack y aplicaciones de escritorio reales —desde portales educativos hasta plataformas de gestión empresarial, municipal y logística en producción— con un enfoque en código limpio, buen diseño y desarrollo seguro. Combino tecnología, creatividad y ganas de crecer para construir soluciones con impacto real.</p>
+      <a href="Frank_Alberca_CV.pdf" download class="btn btn-grad" style="margin-top:8px;">Descargar CV
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </a>
+      <div class="stat-row">
+        <div class="stat glass"><div class="stat-num" data-count="3">3+</div><div class="stat-label">Años de experiencia</div></div>
+        <div class="stat glass"><div class="stat-num" data-count="6">6+</div><div class="stat-label">Proyectos en producción</div></div>
+        <div class="stat glass"><div class="stat-num" data-count="2">2</div><div class="stat-label">Carreras en curso</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="sec" id="proyectos">
+  <div class="center" style="margin-bottom:52px;">
+    <span class="eyebrow rv">Portafolio</span>
+    <h2 class="sh rv rv-d1">Proyectos <span class="ital grad">reales</span></h2>
+    <p class="sh-sub rv rv-d2">Sitios y sistemas actualmente en producción, diseñados con propósito.</p>
+  </div>
+  <div class="pgrid">
+    <article class="pcard glass rv">
+      <div class="pthumb pt1"><span class="pbadge">Web</span><a href="https://institutoipse.edu.pe" target="_blank" rel="noopener" class="plink" aria-label="Abrir Instituto IPSE">↗</a><div class="pthumb-ico">🎓</div></div>
+      <div class="pbody"><div class="pnum">01</div><h3 class="ptitle">Instituto IPSE</h3><div class="purl">institutoipse.edu.pe</div><div class="ptech">WordPress · HTML · CSS · JavaScript · Elementor · Responsive</div></div>
+    </article>
+    <article class="pcard glass rv rv-d1">
+      <div class="pthumb pt2"><span class="pbadge">Web</span><a href="https://institutoeduca.pe" target="_blank" rel="noopener" class="plink" aria-label="Abrir Instituto Educa Perú">↗</a><div class="pthumb-ico">📚</div></div>
+      <div class="pbody"><div class="pnum">02</div><h3 class="ptitle">Instituto Educa Perú</h3><div class="purl">institutoeduca.pe</div><div class="ptech">WordPress · HTML · CSS · JavaScript · Elementor · Responsive</div></div>
+    </article>
+    <article class="pcard glass rv rv-d2">
+      <div class="pthumb pt3"><span class="pbadge">Web</span><a href="https://icepp.edu.pe" target="_blank" rel="noopener" class="plink" aria-label="Abrir ICEPP">↗</a><div class="pthumb-ico">🏫</div></div>
+      <div class="pbody"><div class="pnum">03</div><h3 class="ptitle">ICEPP Instituto</h3><div class="purl">icepp.edu.pe</div><div class="ptech">WordPress · HTML · CSS · JavaScript · Elementor · Responsive</div></div>
+    </article>
+    <article class="pcard glass rv">
+      <div class="pthumb pt4"><span class="pbadge">Sistema</span><a href="https://jcinsightpro.store" target="_blank" rel="noopener" class="plink" aria-label="Abrir JC Insight Pro">↗</a><div class="pthumb-ico">📊</div></div>
+      <div class="pbody"><div class="pnum">04</div><h3 class="ptitle">JC Insight Pro</h3><div class="purl">jcinsightpro.store</div><div class="ptech">PHP · MySQL · JavaScript · SaaS de gestión de inventario, ventas y rentabilidad para MYPEs</div></div>
+    </article>
+    <article class="pcard glass rv rv-d1">
+      <div class="pthumb pt5"><span class="pbadge">Sistema</span><a href="http://lm-munidex.store" target="_blank" rel="noopener" class="plink" aria-label="Abrir LM-MUNIDEX">↗</a><div class="pthumb-ico">🏛️</div></div>
+      <div class="pbody"><div class="pnum">05</div><h3 class="ptitle">LM-MUNIDEX · Municipalidad</h3><div class="purl">lm-munidex.store</div><div class="ptech">PHP · MySQL · JavaScript · Gestión y seguimiento de expedientes con códigos QR</div></div>
+    </article>
+    <article class="pcard glass rv rv-d2">
+      <div class="pthumb pt6"><span class="pbadge">Sistema</span><a href="https://logistic-system.store" target="_blank" rel="noopener" class="plink" aria-label="Abrir Sistema de Gestión Logística">↗</a><div class="pthumb-ico">🚚</div></div>
+      <div class="pbody"><div class="pnum">06</div><h3 class="ptitle">Sistema de Gestión Logística</h3><div class="purl">logistic-system.store</div><div class="ptech">PHP · MySQL · JavaScript · Plataforma institucional con 19 módulos: inventario, almacenes, activos y presupuesto</div></div>
+    </article>
+    <article class="pcard glass rv" style="display:flex;align-items:center;justify-content:center;text-align:center;min-height:280px;">
+      <div class="pbody" style="align-items:center;justify-content:center;">
+        <div style="font-size:34px;margin-bottom:12px;">🚀</div>
+        <h3 class="ptitle">¿El próximo eres tú?</h3>
+        <p class="ptech" style="margin:8px 0 18px;">Tengo cupo para nuevos proyectos.</p>
+        <a href="#contacto" class="btn btn-ghost" style="padding:10px 22px;">Hablemos</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="sec" id="experiencia">
+  <div class="center" style="margin-bottom:46px;">
+    <span class="eyebrow rv">Trayectoria</span>
+    <h2 class="sh rv rv-d1">Experiencia &amp; <span class="ital grad">formación</span></h2>
+  </div>
+  <div style="display:flex;justify-content:center;">
+    <div class="etabs glass rv">
+      <button class="etab on" onclick="stab(this,'exp')">Experiencia</button>
+      <button class="etab" onclick="stab(this,'edu')">Educación</button>
+    </div>
+  </div>
+
+  <div id="tline-exp" style="max-width:760px;margin:0 auto;">
+    <div class="tline">
+      <div class="titem glass rv"><div class="tdot"></div>
+        <div class="thead"><div><div class="trole">Desarrollador Web</div><div class="tco">Institutos IPSE · Educa Perú · ICEPP</div></div><span class="tyr">2023 — Hoy</span></div>
+        <p class="tdesc">Desarrollo de sitios web profesionales para institutos educativos peruanos con WordPress, HTML, CSS y JavaScript. 3 proyectos en producción activa con diseño responsive, SEO básico y mantenimiento continuo.</p>
+      </div>
+      <div class="titem glass rv rv-d1"><div class="tdot"></div>
+        <div class="thead"><div><div class="trole">Desarrollador Full-Stack</div><div class="tco">JC Insight Pro · LM-MUNIDEX</div></div><span class="tyr">2024 — Hoy</span></div>
+        <p class="tdesc">Desarrollo de sistemas web a medida con PHP, MySQL y JavaScript: un SaaS de gestión empresarial para MYPEs y una plataforma de gestión de expedientes municipales con códigos QR y notificaciones.</p>
+      </div>
+      <div class="titem glass rv rv-d2"><div class="tdot"></div>
+        <div class="thead"><div><div class="trole">Desarrollador Python &amp; Diseñador Freelance</div><div class="tco">Proyectos & clientes independientes</div></div><span class="tyr">2023 — Hoy</span></div>
+        <p class="tdesc">Scripts, automatizaciones y programas en Python con integración de IA. Diseño y maquetación de interfaces web modernas con enfoque en experiencia de usuario y rendimiento.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tline-edu" style="display:none;max-width:760px;margin:0 auto;">
+    <div class="tline">
+      <div class="titem glass"><div class="tdot"></div>
+        <div class="thead"><div><div class="trole">Ingeniería de Software con IA</div><div class="tco">SENATI · ID 001458147</div></div><span class="tyr">En curso</span></div>
+        <p class="tdesc">Estudiante activo de Ingeniería de Software con Inteligencia Artificial. Tecnologías modernas de desarrollo, datos e IA aplicada.</p>
+      </div>
+      <div class="titem glass"><div class="tdot"></div>
+        <div class="thead"><div><div class="trole">Ciberseguridad · Segunda carrera</div><div class="tco">Instituto SISE</div></div><span class="tyr">En curso</span></div>
+        <p class="tdesc">Segunda carrera enfocada en seguridad informática: protección de sistemas y redes, análisis de vulnerabilidades y desarrollo seguro. Complementa mi perfil como desarrollador.</p>
+      </div>
+      <div class="titem glass"><div class="tdot"></div>
+        <div class="thead"><div><div class="trole">Educación Secundaria</div><div class="tco">I.E. 5123 "Francisco Bolognesi Cervantes"</div></div><span class="tyr">2016 — 2020</span></div>
+        <p class="tdesc">Educación secundaria completa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="servicios">
+  <div class="center" style="margin-bottom:52px;">
+    <span class="eyebrow rv">Servicios</span>
+    <h2 class="sh rv rv-d1">Lo que <span class="ital grad">ofrezco</span></h2>
+    <p class="sh-sub rv rv-d2">Soluciones que combinan código limpio con diseño memorable.</p>
+  </div>
+  <div class="sgrid">
+    <div class="scard glass rv"><div class="sicon">🌐</div><h3 class="stitle">Desarrollo Web</h3><p class="sdesc">Sitios web profesionales y funcionales para empresas e instituciones, con experiencia real en proyectos educativos peruanos en producción.</p><div class="stags"><span class="tag">WordPress</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Elementor</span><span class="tag">SEO básico</span></div></div>
+    <div class="scard glass rv rv-d1"><div class="sicon">⚙️</div><h3 class="stitle">Sistemas a medida</h3><p class="sdesc">Plataformas web full-stack con PHP y MySQL: paneles de gestión, inventarios, ventas y seguimiento de expedientes, como JC Insight Pro y LM-MUNIDEX.</p><div class="stags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">Dashboards</span><span class="tag">APIs</span></div></div>
+    <div class="scard glass rv"><div class="sicon">🖥️</div><h3 class="stitle">Apps de escritorio</h3><p class="sdesc">Aplicaciones de escritorio a medida para automatizar procesos y gestionar datos localmente, eligiendo el lenguaje según lo que necesite el proyecto.</p><div class="stags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C# / .NET</span><span class="tag">Interfaces (GUI)</span><span class="tag">MySQL / SQLite</span></div></div>
+    <div class="scard glass rv rv-d1"><div class="sicon">🐍</div><h3 class="stitle">Programación Python</h3><p class="sdesc">Scripts, automatizaciones y programas con Python. Manejo de datos, lógica e integración con IA para resolver problemas reales.</p><div class="stags"><span class="tag">Python</span><span class="tag">Automatización</span><span class="tag">IA / ML básico</span><span class="tag">Datos</span></div></div>
+    <div class="scard glass rv rv-d1"><div class="sicon">🔐</div><h3 class="stitle">Desarrollo seguro</h3><p class="sdesc">Aplicando mi formación en ciberseguridad para construir sistemas más robustos: buenas prácticas, validación y protección de datos.</p><div class="stags"><span class="tag">Seguridad web</span><span class="tag">Buenas prácticas</span><span class="tag">Validación</span><span class="tag">Hardening básico</span></div></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec" id="habilidades">
+  <div class="center" style="margin-bottom:52px;">
+    <span class="eyebrow rv">Habilidades</span>
+    <h2 class="sh rv rv-d1">Stack <span class="ital grad">técnico</span></h2>
+    <p class="sh-sub rv rv-d2">Habilidades desarrolladas con proyectos reales y aprendizaje constante.</p>
+  </div>
+  <div class="skwrap rv">
+    <div>
+      <div class="skitem"><div class="skhead"><b>WordPress</b><span>85%</span></div><div class="skbar"><div class="skfill" data-w="85"></div></div></div>
+      <div class="skitem"><div class="skhead"><b>HTML &amp; CSS</b><span>80%</span></div><div class="skbar"><div class="skfill" data-w="80"></div></div></div>
+      <div class="skitem"><div class="skhead"><b>PHP &amp; MySQL</b><span>72%</span></div><div class="skbar"><div class="skfill" data-w="72"></div></div></div>
+      <div class="skitem"><div class="skhead"><b>Python</b><span>70%</span></div><div class="skbar"><div class="skfill" data-w="70"></div></div></div>
+    </div>
+    <div>
+      <div class="skitem"><div class="skhead"><b>JavaScript</b><span>68%</span></div><div class="skbar"><div class="skfill" data-w="68"></div></div></div>
+      <div class="skitem"><div class="skhead"><b>Diseño Web / UI</b><span>75%</span></div><div class="skbar"><div class="skfill" data-w="75"></div></div></div>
+      <div class="skitem"><div class="skhead"><b>Git &amp; GitHub</b><span>60%</span></div><div class="skbar"><div class="skfill" data-w="60"></div></div></div>
+      <div class="skitem"><div class="skhead"><b>Ciberseguridad</b><span>55%</span></div><div class="skbar"><div class="skfill" data-w="55"></div></div></div>
+    </div>
+  </div>
+  <div class="chips rv rv-d1">
+    <div class="chip glass"><span>🐍</span><div><b>Python</b><small>Scripts & programas</small></div></div>
+    <div class="chip glass"><span>🌐</span><div><b>WordPress</b><small>Sitios profesionales</small></div></div>
+    <div class="chip glass"><span>⚡</span><div><b>JavaScript</b><small>Interactividad</small></div></div>
+    <div class="chip glass"><span>🐘</span><div><b>PHP & MySQL</b><small>Backend & datos</small></div></div>
+    <div class="chip glass"><span>🤖</span><div><b>Inteligencia Artificial</b><small>IA aplicada · SENATI</small></div></div>
+    <div class="chip glass"><span>🎨</span><div><b>CSS & Diseño</b><small>Interfaces atractivas</small></div></div>
+    <div class="chip glass"><span>📦</span><div><b>Git & GitHub</b><small>Control de versiones</small></div></div>
+    <div class="chip glass"><span>🔐</span><div><b>Ciberseguridad</b><small>Segunda carrera</small></div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="proceso">
+  <div class="center" style="margin-bottom:52px;">
+    <span class="eyebrow rv">Cómo trabajo</span>
+    <h2 class="sh rv rv-d1">Mi <span class="ital grad">proceso</span></h2>
+    <p class="sh-sub rv rv-d2">Un camino claro desde la idea hasta el proyecto en producción.</p>
+  </div>
+  <div class="steps">
+    <div class="step glass rv"><div class="step-n">01</div><h3>Conversamos</h3><p>Entiendo tu idea, objetivos y público. Definimos el alcance y las funcionalidades clave.</p></div>
+    <div class="step glass rv rv-d1"><div class="step-n">02</div><h3>Diseño & propuesta</h3><p>Planteo la estructura, el diseño visual y un plan de trabajo con tiempos y entregables.</p></div>
+    <div class="step glass rv rv-d2"><div class="step-n">03</div><h3>Desarrollo</h3><p>Construyo el sitio o sistema con código limpio, responsive y enfoque en seguridad.</p></div>
+    <div class="step glass rv rv-d3"><div class="step-n">04</div><h3>Entrega & soporte</h3><p>Publico el proyecto, te capacito en su uso y ofrezco mantenimiento continuo.</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="center" style="margin-bottom:52px;">
+    <span class="eyebrow rv">Preguntas frecuentes</span>
+    <h2 class="sh rv rv-d1">Dudas <span class="ital grad">comunes</span></h2>
+  </div>
+  <div class="faq rv">
+    <div class="faq-item glass"><button class="faq-q" aria-expanded="false">¿Cuánto tarda un proyecto web?<span class="pm">+</span></button><div class="faq-a"><p>Depende del alcance. Una landing o sitio sencillo puede estar en 1–2 semanas; un sistema a medida con base de datos toma más. Te doy un estimado claro tras nuestra primera conversación.</p></div></div>
+    <div class="faq-item glass"><button class="faq-q" aria-expanded="false">¿Trabajas de forma remota?<span class="pm">+</span></button><div class="faq-a"><p>Sí. Trabajo con clientes de todo el Perú de forma 100% remota, coordinando por WhatsApp, correo o videollamada según prefieras.</p></div></div>
+    <div class="faq-item glass"><button class="faq-q" aria-expanded="false">¿Qué incluye el servicio?<span class="pm">+</span></button><div class="faq-a"><p>Diseño, desarrollo, versión responsive (móvil y escritorio), optimización básica y la puesta en producción. Para sistemas, incluyo capacitación de uso.</p></div></div>
+    <div class="faq-item glass"><button class="faq-q" aria-expanded="false">¿Ofreces mantenimiento?<span class="pm">+</span></button><div class="faq-a"><p>Sí. Ofrezco mantenimiento y soporte continuo para mantener tu sitio actualizado, seguro y funcionando sin problemas.</p></div></div>
+    <div class="faq-item glass"><button class="faq-q" aria-expanded="false">¿Cómo iniciamos?<span class="pm">+</span></button><div class="faq-a"><p>Muy fácil: escríbeme por el formulario de contacto o por WhatsApp con tu idea. Conversamos, te preparo una propuesta y empezamos.</p></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contacto">
+  <div class="cwrap">
+    <div class="cinfo rv">
+      <span class="eyebrow">Contacto</span>
+      <h2>Hablemos de tu <span class="grad">próximo proyecto</span></h2>
+      <p>¿Tienes una idea o necesitas un sitio web o sistema? Cuéntame y te respondo lo antes posible.</p>
+      <a class="cline" href="mailto:fransaguitario2003@gmail.com"><div class="ci">✉️</div><div><small>Correo</small><b>fransaguitario2003@gmail.com</b></div></a>
+      <a class="cline" href="https://wa.me/51928314541" target="_blank" rel="noopener"><div class="ci">💬</div><div><small>WhatsApp</small><b>+51 928 314 541</b></div></a>
+      <div class="cline"><div class="ci">📍</div><div><small>Ubicación</small><b>Ventanilla, Callao, Perú 07006</b></div></div>
+      <div class="csocials">
+        <a class="soc glass" href="https://www.facebook.com/alex.alberca.54" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a class="soc glass" href="https://www.instagram.com/franlevius" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="soc glass" href="https://www.tiktok.com/@frangeazy" target="_blank" rel="noopener" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg></a>
+      </div>
+    </div>
+    <form class="cform glass rv rv-d1" id="contactForm" novalidate>
+      <div class="field" id="f-name"><label for="cf-name">Nombre</label><input id="cf-name" type="text" placeholder="Tu nombre" required><span class="err">Ingresa tu nombre.</span></div>
+      <div class="field" id="f-email"><label for="cf-email">Correo</label><input id="cf-email" type="email" placeholder="tu@correo.com" required><span class="err">Ingresa un correo válido.</span></div>
+      <div class="field" id="f-msg"><label for="cf-msg">Mensaje</label><textarea id="cf-msg" placeholder="Cuéntame sobre tu proyecto..." required></textarea><span class="err">Escribe un mensaje.</span></div>
+      <button type="submit" class="btn btn-grad">Enviar por WhatsApp
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35z"/></svg>
+      </button>
+      <p class="form-note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="fl">Frank Alberca</div>
+  <div class="fr">© <span id="year">2026</span> · Hecho con <span>♥</span> en Perú · Todos los derechos reservados</div>
+</footer>
+
+<a href="https://wa.me/51928314541?text=Hola%20Frank,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte" target="_blank" rel="noopener" class="wa-btn" aria-label="Escríbeme por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button class="totop" id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">↑</button>
+
+<script>
+// Menú
+const navLinks=document.getElementById('navLinks'),ham=document.getElementById('hamburger');
+function toggleMenu(){const o=navLinks.classList.toggle('open');ham.classList.toggle('open');ham.setAttribute('aria-expanded',o);ham.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú');}
+function closeMenu(){navLinks.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded','false');ham.setAttribute('aria-label','Abrir menú');}
+
+// Cursor
+const c1=document.getElementById('c1'),c2=document.getElementById('c2');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;c2.style.left=rx+'px';c2.style.top=ry+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button,input,textarea,.pcard,.tcard,.scard,.chip,.step').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{c2.style.width='52px';c2.style.height='52px';c2.style.borderColor='rgba(34,211,238,.9)';c2.style.background='rgba(34,211,238,.06)';});
+  el.addEventListener('mouseleave',()=>{c2.style.width='34px';c2.style.height='34px';c2.style.borderColor='rgba(167,139,250,.6)';c2.style.background='transparent';});
+});
+
+// Progreso + back to top
+const prog=document.getElementById('prog'),toTop=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const p=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  prog.style.width=p+'%';
+  toTop.classList.toggle('show',h.scrollTop>500);
+});
+
+// Parallax aurora
+document.addEventListener('mousemove',e=>{
+  const x=(e.clientX/window.innerWidth-.5)*40,y=(e.clientY/window.innerHeight-.5)*40;
+  document.querySelectorAll('.blob').forEach((b,i)=>{const f=[1.4,-1.1,.8,-.6][i]||1;b.style.transform=`translate(${x*f}px,${y*f}px)`;});
+});
+
+// Reveal
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// Scrollspy
+const navAs=[...document.querySelectorAll('.nav-links a')];
+const spy=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));}});},{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>spy.observe(s));
+
+// Tabs
+function stab(btn,tab){
+  document.querySelectorAll('.etab').forEach(t=>t.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('tline-exp').style.display=tab==='exp'?'block':'none';
+  document.getElementById('tline-edu').style.display=tab==='edu'?'block':'none';
+}
+
+// Skill bars
+const skSec=document.querySelector('#habilidades');
+if(skSec){const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.skfill').forEach(b=>b.style.width=b.dataset.w+'%');o.disconnect();}});},{threshold:.2});o.observe(skSec);}
+
+// Counters
+function animCount(el,t){const suf=el.textContent.replace(/[0-9]/g,'');let s=0,step=Math.max(1,t/40);const id=setInterval(()=>{s=Math.min(s+step,t);el.textContent=Math.floor(s)+suf;if(s>=t)clearInterval(id);},30);}
+const stObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.stat-num').forEach(el=>animCount(el,+el.dataset.count));stObs.unobserve(e.target);}});},{threshold:.4});
+const sr=document.querySelector('.stat-row');if(sr)stObs.observe(sr);
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement,a=q.nextElementSibling,open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');q.setAttribute('aria-expanded','true');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+// Contact form -> WhatsApp
+const form=document.getElementById('contactForm');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('cf-name'),email=document.getElementById('cf-email'),msg=document.getElementById('cf-msg');
+  let ok=true;
+  const set=(el,valid)=>{el.parentElement.classList.toggle('invalid',!valid);if(!valid)ok=false;};
+  set(name,name.value.trim().length>1);
+  set(email,/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()));
+  set(msg,msg.value.trim().length>3);
+  if(!ok)return;
+  const text=`Hola Frank! 👋%0A%0ASoy *${name.value.trim()}*.%0A%0A${msg.value.trim()}%0A%0A📧 Mi correo: ${email.value.trim()}`;
+  window.open('https://wa.me/51928314541?text='+text,'_blank');
+});
+
+// Año
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+<!-- Datos estructurados -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Frank Alberca",
+  "jobTitle":"Ingeniero de Software con IA · Ciberseguridad",
+  "description":"Ingeniero de Software con Inteligencia Artificial (SENATI) y estudiante de Ciberseguridad. Desarrollo full-stack (PHP, MySQL, Python, JavaScript).",
+  "image":"foto-perfil.png",
+  "email":"fransaguitario2003@gmail.com",
+  "telephone":"+51928314541",
+  "address":{"@type":"PostalAddress","addressLocality":"Ventanilla, Callao","addressCountry":"PE"},
+  "alumniOf":[{"@type":"EducationalOrganization","name":"SENATI"},{"@type":"EducationalOrganization","name":"Instituto SISE"}],
+  "knowsAbout":["WordPress","Python","PHP","MySQL","HTML","CSS","JavaScript","Diseño Web","Inteligencia Artificial","Ciberseguridad"],
+  "sameAs":["https://www.facebook.com/alex.alberca.54","https://www.instagram.com/franlevius","https://www.tiktok.com/@frangeazy"]
+}
+</script>
+
+</body>
+</html>

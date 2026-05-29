@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Frank Alberca — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+@page{size:A4;margin:0;}
+:root{
+  --violet:#8b5cf6;--cyan:#22d3ee;--ink:#1a1d2b;--ink2:#3a3f57;--muted:#6b7089;
+  --line:#e6e8f0;--grad:linear-gradient(135deg,#8b5cf6,#22d3ee);
+}
+html,body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:#fff;}
+.page{width:210mm;min-height:297mm;margin:0 auto;display:grid;grid-template-columns:74mm 1fr;background:#fff;}
+
+/* ── SIDEBAR ── */
+.side{background:linear-gradient(165deg,#0e1020,#1a1d35 60%,#101428);color:#e8eafc;padding:15mm 8mm 10mm;position:relative;}
+.side::before{content:'';position:absolute;top:0;left:0;right:0;height:6mm;background:var(--grad);}
+.photo{width:38mm;height:38mm;border-radius:50%;margin:0 auto 6mm;overflow:hidden;border:2px solid rgba(139,92,246,.5);box-shadow:0 0 0 4px rgba(34,211,238,.12);}
+.photo img{width:100%;height:100%;object-fit:cover;}
+.sblock{margin-bottom:6mm;}
+.sh{font-family:'Space Grotesk';font-size:11pt;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4mm;padding-bottom:2mm;border-bottom:1px solid rgba(255,255,255,.12);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;}
+.cline{display:flex;gap:3mm;align-items:flex-start;margin-bottom:3.4mm;font-size:8.5pt;color:#c5c9e6;line-height:1.4;}
+.cline .ico{width:5mm;flex-shrink:0;color:var(--cyan);font-size:9pt;}
+.cline a{color:#c5c9e6;text-decoration:none;word-break:break-word;}
+.skill{margin-bottom:4mm;}
+.skill .lab{display:flex;justify-content:space-between;font-size:8.5pt;margin-bottom:1.6mm;color:#e8eafc;font-weight:500;}
+.bar{height:2.2mm;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden;}
+.bar i{display:block;height:100%;background:var(--grad);border-radius:3px;}
+.tagrow{display:flex;flex-wrap:wrap;gap:2mm;}
+.tg{font-size:7.6pt;padding:1.2mm 2.6mm;border-radius:3px;background:rgba(139,92,246,.16);border:1px solid rgba(139,92,246,.3);color:#dfe2fb;}
+.lang{font-size:8.5pt;color:#c5c9e6;margin-bottom:2.6mm;display:flex;justify-content:space-between;}
+.lang b{color:#fff;font-weight:500;}
+
+/* ── MAIN ── */
+.main{padding:15mm 12mm 10mm;}
+.name{font-family:'Space Grotesk';font-size:30pt;font-weight:700;line-height:1;letter-spacing:-1px;color:var(--ink);}
+.name .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.role{font-size:11pt;color:var(--violet);font-weight:600;margin-top:2mm;letter-spacing:.3px;}
+.divider{height:1px;background:var(--line);margin:4.5mm 0;}
+.mh{font-family:'Space Grotesk';font-size:12pt;font-weight:600;color:var(--ink);margin-bottom:3mm;display:flex;align-items:center;gap:3mm;}
+.mh::before{content:'';width:4mm;height:4mm;border-radius:2px;background:var(--grad);}
+.summary{font-size:9.5pt;color:var(--ink2);line-height:1.6;}
+.item{margin-bottom:4mm;position:relative;padding-left:5mm;}
+.item::before{content:'';position:absolute;left:0;top:1.6mm;width:2.4mm;height:2.4mm;border-radius:50%;background:var(--grad);}
+.item .top{display:flex;justify-content:space-between;align-items:baseline;gap:4mm;}
+.item .ti{font-size:10pt;font-weight:600;color:var(--ink);}
+.item .yr{font-size:8pt;color:var(--muted);white-space:nowrap;font-weight:500;}
+.item .co{font-size:8.8pt;color:var(--violet);font-weight:500;margin:.5mm 0 1.6mm;}
+.item .de{font-size:8.8pt;color:var(--ink2);line-height:1.5;}
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:3.5mm 5mm;}
+.pj{font-size:8.8pt;line-height:1.4;}
+.pj b{color:var(--ink);font-weight:600;}
+.pj .u{color:var(--cyan);font-size:8pt;}
+.pj .d{color:var(--muted);font-size:8pt;}
+.section{margin-bottom:5mm;}
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- SIDEBAR -->
+  <aside class="side">
+    <div class="photo"><img src="foto-perfil.png" alt="Frank Alberca"></div>
+
+    <div class="sblock">
+      <div class="sh">Contacto</div>
+      <div class="cline"><span class="ico">✉</span><a href="mailto:fransaguitario2003@gmail.com">fransaguitario2003@gmail.com</a></div>
+      <div class="cline"><span class="ico">☎</span><span>+51 928 314 541</span></div>
+      <div class="cline"><span class="ico">⌂</span><span>Ventanilla, Callao, Perú 07006</span></div>
+      <div class="cline"><span class="ico">◎</span><a href="https://www.instagram.com/franlevius">instagram.com/franlevius</a></div>
+    </div>
+
+    <div class="sblock">
+      <div class="sh">Habilidades</div>
+      <div class="skill"><div class="lab"><span>WordPress</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
+      <div class="skill"><div class="lab"><span>HTML & CSS</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
+      <div class="skill"><div class="lab"><span>PHP & MySQL</span><span>72%</span></div><div class="bar"><i style="width:72%"></i></div></div>
+      <div class="skill"><div class="lab"><span>Python</span><span>70%</span></div><div class="bar"><i style="width:70%"></i></div></div>
+      <div class="skill"><div class="lab"><span>JavaScript</span><span>68%</span></div><div class="bar"><i style="width:68%"></i></div></div>
+      <div class="skill"><div class="lab"><span>Ciberseguridad</span><span>55%</span></div><div class="bar"><i style="width:55%"></i></div></div>
+    </div>
+
+    <div class="sblock">
+      <div class="sh">Herramientas</div>
+      <div class="tagrow">
+        <span class="tg">Java</span><span class="tg">C# / .NET</span><span class="tg">Git & GitHub</span>
+        <span class="tg">VS Code</span><span class="tg">Elementor</span><span class="tg">Figma</span>
+        <span class="tg">Apps de escritorio</span><span class="tg">IA / ML</span>
+      </div>
+    </div>
+
+    <div class="sblock">
+      <div class="sh">Idiomas</div>
+      <div class="lang"><b>Español</b><span>Nativo</span></div>
+      <div class="lang"><b>Inglés</b><span>Básico</span></div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="name">Frank <span class="g">Alberca</span></div>
+    <div class="role">Ingeniero de Software con IA · Ciberseguridad</div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="mh">Perfil profesional</div>
+      <p class="summary">Ingeniero de Software con Inteligencia Artificial (SENATI) y estudiante de la carrera de Ciberseguridad. Desarrollo sitios web, sistemas full-stack y aplicaciones de escritorio en producción —desde portales educativos hasta plataformas de gestión empresarial, municipal y logística— con enfoque en código limpio, buen diseño y desarrollo seguro.</p>
+    </div>
+
+    <div class="section">
+      <div class="mh">Experiencia</div>
+      <div class="item">
+        <div class="top"><span class="ti">Desarrollador Web</span><span class="yr">2023 — Hoy</span></div>
+        <div class="co">Institutos IPSE · Educa Perú · ICEPP</div>
+        <div class="de">Sitios web profesionales para institutos educativos peruanos con WordPress, HTML, CSS y JavaScript. 3 proyectos en producción con diseño responsive, SEO básico y mantenimiento continuo.</div>
+      </div>
+      <div class="item">
+        <div class="top"><span class="ti">Desarrollador Full-Stack</span><span class="yr">2024 — Hoy</span></div>
+        <div class="co">JC Insight Pro · LM-MUNIDEX</div>
+        <div class="de">Sistemas web a medida con PHP, MySQL y JavaScript: un SaaS de gestión empresarial para MYPEs y una plataforma de gestión de expedientes municipales con códigos QR y notificaciones.</div>
+      </div>
+      <div class="item">
+        <div class="top"><span class="ti">Desarrollador Python & Diseñador Freelance</span><span class="yr">2023 — Hoy</span></div>
+        <div class="co">Proyectos y clientes independientes</div>
+        <div class="de">Scripts y automatizaciones en Python con integración de IA. Diseño y maquetación de interfaces web modernas con enfoque en experiencia de usuario y rendimiento.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="mh">Educación</div>
+      <div class="item">
+        <div class="top"><span class="ti">Ingeniería de Software con IA</span><span class="yr">En curso</span></div>
+        <div class="co">SENATI · ID 001458147</div>
+      </div>
+      <div class="item">
+        <div class="top"><span class="ti">Ciberseguridad — Segunda carrera</span><span class="yr">En curso</span></div>
+        <div class="co">Instituto SISE</div>
+      </div>
+      <div class="item">
+        <div class="top"><span class="ti">Educación Secundaria completa</span><span class="yr">2016 — 2020</span></div>
+        <div class="co">I.E. 5123 "Francisco Bolognesi Cervantes"</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="mh">Proyectos destacados</div>
+      <div class="proj">
+        <div class="pj"><b>Instituto IPSE</b> <span class="d">· Web</span><br><span class="u">institutoipse.edu.pe</span></div>
+        <div class="pj"><b>Instituto Educa Perú</b> <span class="d">· Web</span><br><span class="u">institutoeduca.pe</span></div>
+        <div class="pj"><b>ICEPP Instituto</b> <span class="d">· Web</span><br><span class="u">icepp.edu.pe</span></div>
+        <div class="pj"><b>JC Insight Pro</b> <span class="d">· SaaS</span><br><span class="u">jcinsightpro.store</span></div>
+        <div class="pj"><b>LM-MUNIDEX</b> <span class="d">· Sistema municipal</span><br><span class="u">lm-munidex.store</span></div>
+        <div class="pj"><b>Sistema de Gestión Logística</b> <span class="d">· Sistema institucional</span><br><span class="u">logistic-system.store</span></div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
