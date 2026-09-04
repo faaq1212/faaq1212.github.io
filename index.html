@@ -193,6 +193,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .pt4{background:linear-gradient(135deg,#164e63,#0e7490);}
 .pt5{background:linear-gradient(135deg,#4a044e,#581c87);}
 .pt6{background:linear-gradient(135deg,#0f766e,#1e3a8a);}
+.pt7{background:linear-gradient(135deg,#1e3a5f,#0ea5e9);}
+.pt8{background:linear-gradient(135deg,#7c2d12,#c2410c);}
+.pt9{background:linear-gradient(135deg,#831843,#db2777);}
+.pt10{background:linear-gradient(135deg,#312e81,#4338ca);}
+.pt11{background:linear-gradient(135deg,#134e4a,#0f766e);}
+.pt12{background:linear-gradient(135deg,#4c1d95,#7e22ce);}
+.pt13{background:linear-gradient(135deg,#164e63,#0891b2);}
+.pt14{background:linear-gradient(135deg,#1e293b,#475569);}
+.pt15{background:linear-gradient(135deg,#3f3f46,#52525b);}
 .pthumb-ico{font-size:46px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.4));transition:transform .4s;}
 .pcard:hover .pthumb-ico{transform:scale(1.15) rotate(-4deg);}
 .pthumb::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,rgba(255,255,255,.12),transparent 60%);}
@@ -255,6 +264,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .step-n{font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;line-height:1;background:var(--grad2);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.5;margin-bottom:14px;}
 .step h3{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600;margin-bottom:9px;}
 .step p{font-size:13px;color:var(--muted);}
+.steps-carousel{display:none;}
 
 /* ── FAQ ── */
 .faq{max-width:760px;margin:0 auto;}
@@ -351,10 +361,28 @@ footer .fr span{color:var(--cyan);}
   .ap-wrap{max-width:280px;margin:0 auto;}
   .stat-row{justify-content:center;}
   .about .btn,.about .h-cta{margin:0 auto;}
-  .pgrid{grid-template-columns:1fr;}
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .pthumb{height:100px;}
+  .pthumb-ico{font-size:26px;}
+  .pbadge{top:8px;left:8px;font-size:8px;padding:4px 8px;}
+  .plink{top:8px;right:8px;width:26px;height:26px;font-size:12px;}
+  .pbody{padding:12px 12px 14px;}
+  .pnum{font-size:10px;margin-bottom:3px;}
+  .ptitle{font-size:13px;margin-bottom:5px;line-height:1.2;}
+  .purl{font-size:9.5px;margin-bottom:7px;}
+  .ptech{font-size:10px;line-height:1.35;}
+  .chips{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:100%;}
+  .chip{padding:10px 12px;border-radius:14px;gap:8px;}
+  .chip span{font-size:18px;}
+  .chip b{font-size:11.5px;}
+  .chip small{font-size:9px;}
   .sgrid{grid-template-columns:1fr;}
   .skwrap{grid-template-columns:1fr;gap:0;}
-  .steps{grid-template-columns:1fr;}
+  #stepsGrid{display:none;}
+  .steps-carousel{display:block;overflow:hidden;margin:0 -20px;padding:4px 20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
+  .steps-track{display:flex;gap:18px;width:max-content;animation:stepsScroll 20s linear infinite;}
+  .steps-track .step{width:250px;flex-shrink:0;}
+  @keyframes stepsScroll{to{transform:translateX(-50%);}}
   .tgrid{grid-template-columns:1fr;}
   .cwrap{grid-template-columns:1fr;gap:34px;}
   .thead{flex-direction:column;}
@@ -461,8 +489,8 @@ footer .fr span{color:var(--cyan);}
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>WordPress</span><span>Python</span><span>Java</span><span>C#</span><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML &amp; CSS</span><span>Ciberseguridad</span><span>Diseño Web</span><span>IA</span>
-    <span>WordPress</span><span>Python</span><span>Java</span><span>C#</span><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML &amp; CSS</span><span>Ciberseguridad</span><span>Diseño Web</span><span>IA</span>
+    <span>WordPress</span><span>Python</span><span>Java</span><span>C#</span><span>PHP</span><span>Laravel</span><span>MySQL</span><span>JavaScript</span><span>React Native</span><span>HTML &amp; CSS</span><span>Ciberseguridad</span><span>Diseño Web</span><span>IA</span>
+    <span>WordPress</span><span>Python</span><span>Java</span><span>C#</span><span>PHP</span><span>Laravel</span><span>MySQL</span><span>JavaScript</span><span>React Native</span><span>HTML &amp; CSS</span><span>Ciberseguridad</span><span>Diseño Web</span><span>IA</span>
   </div>
 </div>
 
@@ -483,7 +511,7 @@ footer .fr span{color:var(--cyan);}
       </a>
       <div class="stat-row">
         <div class="stat glass"><div class="stat-num" data-count="3">3+</div><div class="stat-label">Años de experiencia</div></div>
-        <div class="stat glass"><div class="stat-num" data-count="6">6+</div><div class="stat-label">Proyectos en producción</div></div>
+        <div class="stat glass"><div class="stat-num" data-count="15">15+</div><div class="stat-label">Proyectos desarrollados</div></div>
         <div class="stat glass"><div class="stat-num" data-count="2">2</div><div class="stat-label">Carreras en curso</div></div>
       </div>
     </div>
@@ -495,7 +523,7 @@ footer .fr span{color:var(--cyan);}
   <div class="center" style="margin-bottom:52px;">
     <span class="eyebrow rv">Portafolio</span>
     <h2 class="sh rv rv-d1">Proyectos <span class="ital grad">reales</span></h2>
-    <p class="sh-sub rv rv-d2">Sitios y sistemas actualmente en producción, diseñados con propósito.</p>
+    <p class="sh-sub rv rv-d2">Sitios y sistemas reales para empresas, instituciones y marcas propias, diseñados con propósito.</p>
   </div>
   <div class="pgrid">
     <article class="pcard glass rv">
@@ -521,6 +549,42 @@ footer .fr span{color:var(--cyan);}
     <article class="pcard glass rv rv-d2">
       <div class="pthumb pt6"><span class="pbadge">Sistema</span><a href="https://logistic-system.store" target="_blank" rel="noopener" class="plink" aria-label="Abrir Sistema de Gestión Logística">↗</a><div class="pthumb-ico">🚚</div></div>
       <div class="pbody"><div class="pnum">06</div><h3 class="ptitle">Sistema de Gestión Logística</h3><div class="purl">logistic-system.store</div><div class="ptech">PHP · MySQL · JavaScript · Plataforma institucional con 19 módulos: inventario, almacenes, activos y presupuesto</div></div>
+    </article>
+    <article class="pcard glass rv">
+      <div class="pthumb pt7"><span class="pbadge">Web</span><a href="https://vivasac.pe" target="_blank" rel="noopener" class="plink" aria-label="Abrir Viva Representaciones SAC">↗</a><div class="pthumb-ico">🏭</div></div>
+      <div class="pbody"><div class="pnum">07</div><h3 class="ptitle">Viva Representaciones SAC</h3><div class="purl">vivasac.pe</div><div class="ptech">PHP · MySQL · API · Distribuidora de productos industriales y de construcción, con panel admin</div></div>
+    </article>
+    <article class="pcard glass rv rv-d1">
+      <div class="pthumb pt8"><span class="pbadge">E-commerce</span><a href="https://paytiti.com.pe" target="_blank" rel="noopener" class="plink" aria-label="Abrir Paytiti C&C">↗</a><div class="pthumb-ico">🍫</div></div>
+      <div class="pbody"><div class="pnum">08</div><h3 class="ptitle">Paytiti C&amp;C</h3><div class="purl">paytiti.com.pe</div><div class="ptech">PHP · MySQL · Catálogo de chocolate y cacao artesanal cusqueño, fichas en PDF y panel admin</div></div>
+    </article>
+    <article class="pcard glass rv rv-d2">
+      <div class="pthumb pt9"><span class="pbadge">E-commerce</span><a href="https://menamora.store" target="_blank" rel="noopener" class="plink" aria-label="Abrir Menamora">↗</a><div class="pthumb-ico">💍</div></div>
+      <div class="pbody"><div class="pnum">09</div><h3 class="ptitle">Menamora</h3><div class="purl">menamora.store</div><div class="ptech">HTML/CSS/JS · PWA · PHP · Tienda de bisutería y regalos, instalable, SEO con Schema.org</div></div>
+    </article>
+    <article class="pcard glass rv">
+      <div class="pthumb pt10"><span class="pbadge">SaaS</span><div class="pthumb-ico">🤖</div></div>
+      <div class="pbody"><div class="pnum">10</div><h3 class="ptitle">Alex Systems SAC</h3><div class="purl">Marca personal</div><div class="ptech">PHP · MySQL · Culqi · IA · Plataforma propia: e-commerce, pasarela de pagos, panel cliente y admin</div></div>
+    </article>
+    <article class="pcard glass rv rv-d1">
+      <div class="pthumb pt11"><span class="pbadge">Sistema</span><div class="pthumb-ico">🏢</div></div>
+      <div class="pbody"><div class="pnum">11</div><h3 class="ptitle">Sistema Municipal de Cajaruro</h3><div class="purl">Gestión municipal</div><div class="ptech">PHP · MySQL · APIs externas · Trámites en línea, notificaciones WhatsApp/SMS, consulta SUNAT y QR</div></div>
+    </article>
+    <article class="pcard glass rv rv-d2">
+      <div class="pthumb pt12"><span class="pbadge">Sistema</span><div class="pthumb-ico">📝</div></div>
+      <div class="pbody"><div class="pnum">12</div><h3 class="ptitle">Plataforma de Evaluación Anti-Copia</h3><div class="purl">Procesos de selección</div><div class="ptech">PHP · MySQL · JavaScript · Exámenes con detección de copia y registro de incidencias</div></div>
+    </article>
+    <article class="pcard glass rv">
+      <div class="pthumb pt13"><span class="pbadge">App móvil</span><div class="pthumb-ico">📱</div></div>
+      <div class="pbody"><div class="pnum">13</div><h3 class="ptitle">ALEX SISTEM App</h3><div class="purl">App de catálogo</div><div class="ptech">React Native · Expo · TypeScript · Catálogo de sistemas, leads y panel admin desde el celular</div></div>
+    </article>
+    <article class="pcard glass rv rv-d1">
+      <div class="pthumb pt14"><span class="pbadge">API</span><div class="pthumb-ico">🧾</div></div>
+      <div class="pbody"><div class="pnum">14</div><h3 class="ptitle">API SUNAT Backend</h3><div class="purl">Servicio backend</div><div class="ptech">Laravel · PHP · MySQL · API REST para consulta de comprobantes y datos de SUNAT</div></div>
+    </article>
+    <article class="pcard glass rv rv-d2">
+      <div class="pthumb pt15"><span class="pbadge">Sistema</span><div class="pthumb-ico">🤝</div></div>
+      <div class="pbody"><div class="pnum">15</div><h3 class="ptitle">Grupo Claros</h3><div class="purl">Red de agencias</div><div class="ptech">PHP · MySQL · SMTP · Sistema con afiliados, agencias y cupones, panel de salud del sistema</div></div>
     </article>
     <article class="pcard glass rv" style="display:flex;align-items:center;justify-content:center;text-align:center;min-height:280px;">
       <div class="pbody" style="align-items:center;justify-content:center;">
@@ -590,7 +654,7 @@ footer .fr span{color:var(--cyan);}
   </div>
   <div class="sgrid">
     <div class="scard glass rv"><div class="sicon">🌐</div><h3 class="stitle">Desarrollo Web</h3><p class="sdesc">Sitios web profesionales y funcionales para empresas e instituciones, con experiencia real en proyectos educativos peruanos en producción.</p><div class="stags"><span class="tag">WordPress</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Elementor</span><span class="tag">SEO básico</span></div></div>
-    <div class="scard glass rv rv-d1"><div class="sicon">⚙️</div><h3 class="stitle">Sistemas a medida</h3><p class="sdesc">Plataformas web full-stack con PHP y MySQL: paneles de gestión, inventarios, ventas y seguimiento de expedientes, como JC Insight Pro y LM-MUNIDEX.</p><div class="stags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">Dashboards</span><span class="tag">APIs</span></div></div>
+    <div class="scard glass rv rv-d1"><div class="sicon">⚙️</div><h3 class="stitle">Sistemas a medida</h3><p class="sdesc">Plataformas web full-stack con PHP y MySQL: paneles de gestión, inventarios, ventas y trámites, como JC Insight Pro, Alex Systems SAC y el Sistema Municipal de Cajaruro.</p><div class="stags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">Dashboards</span><span class="tag">APIs</span></div></div>
     <div class="scard glass rv"><div class="sicon">🖥️</div><h3 class="stitle">Apps de escritorio</h3><p class="sdesc">Aplicaciones de escritorio a medida para automatizar procesos y gestionar datos localmente, eligiendo el lenguaje según lo que necesite el proyecto.</p><div class="stags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C# / .NET</span><span class="tag">Interfaces (GUI)</span><span class="tag">MySQL / SQLite</span></div></div>
     <div class="scard glass rv rv-d1"><div class="sicon">🐍</div><h3 class="stitle">Programación Python</h3><p class="sdesc">Scripts, automatizaciones y programas con Python. Manejo de datos, lógica e integración con IA para resolver problemas reales.</p><div class="stags"><span class="tag">Python</span><span class="tag">Automatización</span><span class="tag">IA / ML básico</span><span class="tag">Datos</span></div></div>
     <div class="scard glass rv rv-d1"><div class="sicon">🔐</div><h3 class="stitle">Desarrollo seguro</h3><p class="sdesc">Aplicando mi formación en ciberseguridad para construir sistemas más robustos: buenas prácticas, validación y protección de datos.</p><div class="stags"><span class="tag">Seguridad web</span><span class="tag">Buenas prácticas</span><span class="tag">Validación</span><span class="tag">Hardening básico</span></div></div>
@@ -627,6 +691,8 @@ footer .fr span{color:var(--cyan);}
     <div class="chip glass"><span>🎨</span><div><b>CSS & Diseño</b><small>Interfaces atractivas</small></div></div>
     <div class="chip glass"><span>📦</span><div><b>Git & GitHub</b><small>Control de versiones</small></div></div>
     <div class="chip glass"><span>🔐</span><div><b>Ciberseguridad</b><small>Segunda carrera</small></div></div>
+    <div class="chip glass"><span>🧱</span><div><b>Laravel</b><small>APIs & backend</small></div></div>
+    <div class="chip glass"><span>📱</span><div><b>React Native</b><small>Apps móviles</small></div></div>
   </div>
 </section>
 
@@ -637,11 +703,23 @@ footer .fr span{color:var(--cyan);}
     <h2 class="sh rv rv-d1">Mi <span class="ital grad">proceso</span></h2>
     <p class="sh-sub rv rv-d2">Un camino claro desde la idea hasta el proyecto en producción.</p>
   </div>
-  <div class="steps">
+  <div class="steps" id="stepsGrid">
     <div class="step glass rv"><div class="step-n">01</div><h3>Conversamos</h3><p>Entiendo tu idea, objetivos y público. Definimos el alcance y las funcionalidades clave.</p></div>
     <div class="step glass rv rv-d1"><div class="step-n">02</div><h3>Diseño & propuesta</h3><p>Planteo la estructura, el diseño visual y un plan de trabajo con tiempos y entregables.</p></div>
     <div class="step glass rv rv-d2"><div class="step-n">03</div><h3>Desarrollo</h3><p>Construyo el sitio o sistema con código limpio, responsive y enfoque en seguridad.</p></div>
     <div class="step glass rv rv-d3"><div class="step-n">04</div><h3>Entrega & soporte</h3><p>Publico el proyecto, te capacito en su uso y ofrezco mantenimiento continuo.</p></div>
+  </div>
+  <div class="steps-carousel" aria-hidden="true">
+    <div class="steps-track">
+      <div class="step glass"><div class="step-n">01</div><h3>Conversamos</h3><p>Entiendo tu idea, objetivos y público. Definimos el alcance y las funcionalidades clave.</p></div>
+      <div class="step glass"><div class="step-n">02</div><h3>Diseño & propuesta</h3><p>Planteo la estructura, el diseño visual y un plan de trabajo con tiempos y entregables.</p></div>
+      <div class="step glass"><div class="step-n">03</div><h3>Desarrollo</h3><p>Construyo el sitio o sistema con código limpio, responsive y enfoque en seguridad.</p></div>
+      <div class="step glass"><div class="step-n">04</div><h3>Entrega & soporte</h3><p>Publico el proyecto, te capacito en su uso y ofrezco mantenimiento continuo.</p></div>
+      <div class="step glass"><div class="step-n">01</div><h3>Conversamos</h3><p>Entiendo tu idea, objetivos y público. Definimos el alcance y las funcionalidades clave.</p></div>
+      <div class="step glass"><div class="step-n">02</div><h3>Diseño & propuesta</h3><p>Planteo la estructura, el diseño visual y un plan de trabajo con tiempos y entregables.</p></div>
+      <div class="step glass"><div class="step-n">03</div><h3>Desarrollo</h3><p>Construyo el sitio o sistema con código limpio, responsive y enfoque en seguridad.</p></div>
+      <div class="step glass"><div class="step-n">04</div><h3>Entrega & soporte</h3><p>Publico el proyecto, te capacito en su uso y ofrezco mantenimiento continuo.</p></div>
+    </div>
   </div>
 </section>
 
@@ -798,7 +876,7 @@ document.getElementById('year').textContent=new Date().getFullYear();
   "telephone":"+51928314541",
   "address":{"@type":"PostalAddress","addressLocality":"Ventanilla, Callao","addressCountry":"PE"},
   "alumniOf":[{"@type":"EducationalOrganization","name":"SENATI"},{"@type":"EducationalOrganization","name":"Instituto SISE"}],
-  "knowsAbout":["WordPress","Python","PHP","MySQL","HTML","CSS","JavaScript","Diseño Web","Inteligencia Artificial","Ciberseguridad"],
+  "knowsAbout":["WordPress","Python","PHP","Laravel","MySQL","HTML","CSS","JavaScript","React Native","Diseño Web","Inteligencia Artificial","Ciberseguridad"],
   "sameAs":["https://www.facebook.com/alex.alberca.54","https://www.instagram.com/franlevius","https://www.tiktok.com/@frangeazy"]
 }
 </script>
