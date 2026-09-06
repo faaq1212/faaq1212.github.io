@@ -3,164 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <title>Frank Alberca — CV</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
 @page{size:A4;margin:0;}
 :root{
-  --violet:#8b5cf6;--cyan:#22d3ee;--ink:#1a1d2b;--ink2:#3a3f57;--muted:#6b7089;
-  --line:#e6e8f0;--grad:linear-gradient(135deg,#8b5cf6,#22d3ee);
+  --teal:#1c7d8c;
+  --ink:#1a1a1a;
+  --ink2:#333333;
+  --muted:#5c5c5c;
+  --line:#1c7d8c;
 }
-html,body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:#fff;}
-.page{width:210mm;min-height:297mm;margin:0 auto;display:grid;grid-template-columns:74mm 1fr;background:#fff;}
+html,body{font-family:'Calibri','Segoe UI',Arial,sans-serif;color:var(--ink2);background:#fff;}
+.page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;padding:10.5mm 18mm;}
 
-/* ── SIDEBAR ── */
-.side{background:linear-gradient(165deg,#0e1020,#1a1d35 60%,#101428);color:#e8eafc;padding:15mm 8mm 10mm;position:relative;}
-.side::before{content:'';position:absolute;top:0;left:0;right:0;height:6mm;background:var(--grad);}
-.photo{width:38mm;height:38mm;border-radius:50%;margin:0 auto 6mm;overflow:hidden;border:2px solid rgba(139,92,246,.5);box-shadow:0 0 0 4px rgba(34,211,238,.12);}
-.photo img{width:100%;height:100%;object-fit:cover;}
-.sblock{margin-bottom:6mm;}
-.sh{font-family:'Space Grotesk';font-size:11pt;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4mm;padding-bottom:2mm;border-bottom:1px solid rgba(255,255,255,.12);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;}
-.cline{display:flex;gap:3mm;align-items:flex-start;margin-bottom:3.4mm;font-size:8.5pt;color:#c5c9e6;line-height:1.4;}
-.cline .ico{width:5mm;flex-shrink:0;color:var(--cyan);font-size:9pt;}
-.cline a{color:#c5c9e6;text-decoration:none;word-break:break-word;}
-.skill{margin-bottom:4mm;}
-.skill .lab{display:flex;justify-content:space-between;font-size:8.5pt;margin-bottom:1.6mm;color:#e8eafc;font-weight:500;}
-.bar{height:2.2mm;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden;}
-.bar i{display:block;height:100%;background:var(--grad);border-radius:3px;}
-.tagrow{display:flex;flex-wrap:wrap;gap:2mm;}
-.tg{font-size:7.6pt;padding:1.2mm 2.6mm;border-radius:3px;background:rgba(139,92,246,.16);border:1px solid rgba(139,92,246,.3);color:#dfe2fb;}
-.lang{font-size:8.5pt;color:#c5c9e6;margin-bottom:2.6mm;display:flex;justify-content:space-between;}
-.lang b{color:#fff;font-weight:500;}
+.name{font-family:Georgia,'Times New Roman',serif;font-size:22pt;font-weight:700;color:var(--ink);letter-spacing:.3px;}
+.role{font-size:10pt;color:var(--teal);font-weight:700;margin-top:1mm;}
+.rule{height:1.1mm;background:var(--line);margin:2.5mm 0 3mm;}
+.contact{font-size:9.3pt;color:var(--ink2);}
+.contact a{color:var(--ink2);text-decoration:none;}
+.contact span.sep{color:var(--muted);margin:0 2mm;}
 
-/* ── MAIN ── */
-.main{padding:15mm 12mm 10mm;}
-.name{font-family:'Space Grotesk';font-size:30pt;font-weight:700;line-height:1;letter-spacing:-1px;color:var(--ink);}
-.name .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-.role{font-size:11pt;color:var(--violet);font-weight:600;margin-top:2mm;letter-spacing:.3px;}
-.divider{height:1px;background:var(--line);margin:4.5mm 0;}
-.mh{font-family:'Space Grotesk';font-size:12pt;font-weight:600;color:var(--ink);margin-bottom:3mm;display:flex;align-items:center;gap:3mm;}
-.mh::before{content:'';width:4mm;height:4mm;border-radius:2px;background:var(--grad);}
-.summary{font-size:9.5pt;color:var(--ink2);line-height:1.6;}
-.item{margin-bottom:4mm;position:relative;padding-left:5mm;}
-.item::before{content:'';position:absolute;left:0;top:1.6mm;width:2.4mm;height:2.4mm;border-radius:50%;background:var(--grad);}
-.item .top{display:flex;justify-content:space-between;align-items:baseline;gap:4mm;}
-.item .ti{font-size:10pt;font-weight:600;color:var(--ink);}
-.item .yr{font-size:8pt;color:var(--muted);white-space:nowrap;font-weight:500;}
-.item .co{font-size:8.8pt;color:var(--violet);font-weight:500;margin:.5mm 0 1.6mm;}
-.item .de{font-size:8.8pt;color:var(--ink2);line-height:1.5;}
-.proj{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm 4mm;}
-.pj{font-size:8pt;line-height:1.35;}
-.pj b{color:var(--ink);font-weight:600;}
-.pj .u{color:var(--cyan);font-size:7.3pt;}
-.pj .d{color:var(--muted);font-size:7.3pt;}
-.section{margin-bottom:5mm;}
+.section{margin-top:3mm;}
+.sh{font-family:Georgia,'Times New Roman',serif;font-size:11pt;font-weight:700;color:var(--teal);margin-bottom:1.8mm;}
+.summary{font-size:9.2pt;line-height:1.42;color:var(--ink2);text-align:justify;}
+
+.inst{font-weight:700;font-size:9.5pt;color:var(--ink);text-transform:uppercase;margin-top:2.2mm;}
+.inst:first-child{margin-top:0;}
+.edu-l{font-size:9.1pt;color:var(--ink2);margin-left:3mm;line-height:1.4;}
+.edu-l b{font-weight:700;color:var(--ink);}
+
+.apt{font-size:9.1pt;line-height:1.4;color:var(--ink2);margin-bottom:1mm;}
+.apt b{color:var(--ink);font-weight:700;}
+
+.job-yr{font-size:9.1pt;color:var(--ink2);margin-top:2.2mm;margin-left:3mm;}
+.job-yr:first-of-type{margin-top:0;}
+.job-ti{font-weight:700;font-size:9.5pt;color:var(--ink);margin:.4mm 0 1mm;}
+.blist{margin:0 0 0 7mm;padding:0;}
+.blist li{font-size:9pt;line-height:1.38;color:var(--ink2);margin-bottom:.8mm;}
+
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:1.1mm 6mm;margin-top:.8mm;}
+.proj li{font-size:8.8pt;line-height:1.35;color:var(--ink2);list-style:disc;margin-left:4mm;}
+.proj li b{color:var(--ink);font-weight:700;}
+.proj li span{color:var(--teal);}
+
+.footline{font-size:9.1pt;color:var(--ink2);line-height:1.4;}
+.footline b{color:var(--ink);font-weight:700;}
 </style>
 </head>
 <body>
 <div class="page">
-  <!-- SIDEBAR -->
-  <aside class="side">
-    <div class="photo"><img src="foto-perfil.png" alt="Frank Alberca"></div>
 
-    <div class="sblock">
-      <div class="sh">Contacto</div>
-      <div class="cline"><span class="ico">✉</span><a href="mailto:fransaguitario2003@gmail.com">fransaguitario2003@gmail.com</a></div>
-      <div class="cline"><span class="ico">☎</span><span>+51 928 314 541</span></div>
-      <div class="cline"><span class="ico">⌂</span><span>Ventanilla, Callao, Perú 07006</span></div>
-      <div class="cline"><span class="ico">◎</span><a href="https://www.instagram.com/franlevius">instagram.com/franlevius</a></div>
-    </div>
+  <div class="name">Frank Alberca</div>
+  <div class="role">Ingeniero de Software con IA · Ciberseguridad</div>
+  <div class="rule"></div>
+  <div class="contact">Ventanilla, Callao, Perú 07006<span class="sep">|</span>+51 928 314 541<span class="sep">|</span><a href="mailto:fransaguitario2003@gmail.com">fransaguitario2003@gmail.com</a></div>
 
-    <div class="sblock">
-      <div class="sh">Habilidades</div>
-      <div class="skill"><div class="lab"><span>WordPress</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
-      <div class="skill"><div class="lab"><span>HTML & CSS</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
-      <div class="skill"><div class="lab"><span>PHP & MySQL</span><span>72%</span></div><div class="bar"><i style="width:72%"></i></div></div>
-      <div class="skill"><div class="lab"><span>Python</span><span>70%</span></div><div class="bar"><i style="width:70%"></i></div></div>
-      <div class="skill"><div class="lab"><span>JavaScript</span><span>68%</span></div><div class="bar"><i style="width:68%"></i></div></div>
-      <div class="skill"><div class="lab"><span>Ciberseguridad</span><span>55%</span></div><div class="bar"><i style="width:55%"></i></div></div>
-    </div>
+  <div class="section">
+    <div class="sh">Perfil profesional</div>
+    <p class="summary">Ingeniero de Software con Inteligencia Artificial (SENATI) y estudiante de la carrera de Ciberseguridad, con más de 2 años de experiencia desarrollando sitios web y sistemas full-stack en producción. Habilidad comprobada para construir plataformas reales para institutos educativos, empresas y municipalidades, con enfoque en código limpio, buen diseño y desarrollo seguro. Organizado, autodidacta y con capacidad para gestionar varios proyectos y clientes a la vez.</p>
+  </div>
 
-    <div class="sblock">
-      <div class="sh">Herramientas</div>
-      <div class="tagrow">
-        <span class="tg">Java</span><span class="tg">C# / .NET</span><span class="tg">Laravel</span>
-        <span class="tg">React Native</span><span class="tg">Git & GitHub</span><span class="tg">VS Code</span>
-        <span class="tg">Elementor</span><span class="tg">Figma</span><span class="tg">IA / ML</span>
-      </div>
-    </div>
+  <div class="section">
+    <div class="sh">Educación</div>
+    <div class="inst">SENATI</div>
+    <div class="edu-l">ID 001458147 &nbsp;|&nbsp; Período: En curso</div>
+    <div class="edu-l"><b>Ingeniería de Software con Inteligencia Artificial</b></div>
 
-    <div class="sblock">
-      <div class="sh">Idiomas</div>
-      <div class="lang"><b>Español</b><span>Nativo</span></div>
-      <div class="lang"><b>Inglés</b><span>Básico</span></div>
-    </div>
-  </aside>
+    <div class="inst">Instituto SISE</div>
+    <div class="edu-l">Período: En curso</div>
+    <div class="edu-l"><b>Ciberseguridad — Segunda carrera</b></div>
 
-  <!-- MAIN -->
-  <main class="main">
-    <div class="name">Frank <span class="g">Alberca</span></div>
-    <div class="role">Ingeniero de Software con IA · Ciberseguridad</div>
+    <div class="inst">I.E. 5123 "Francisco Bolognesi Cervantes"</div>
+    <div class="edu-l">Período: 2016 – 2020</div>
+    <div class="edu-l"><b>Educación secundaria completa</b></div>
+  </div>
 
-    <div class="divider"></div>
+  <div class="section">
+    <div class="sh">Aptitudes y habilidades</div>
+    <div class="apt"><b>Desarrollo Web:</b> WordPress, HTML, CSS y JavaScript, con proyectos reales en producción para institutos educativos.</div>
+    <div class="apt"><b>Sistemas a medida:</b> PHP, MySQL y Laravel para paneles de gestión, inventarios, ventas y trámites en línea.</div>
+    <div class="apt"><b>Programación y Automatización:</b> Scripts y programas en Python, con integración de inteligencia artificial.</div>
+    <div class="apt"><b>Apps móviles:</b> Desarrollo de aplicaciones con React Native y Expo.</div>
+    <div class="apt"><b>Desarrollo Seguro:</b> Buenas prácticas de ciberseguridad, validación de datos y protección de información.</div>
+    <div class="apt"><b>Organización y Adaptabilidad:</b> Gestión simultánea de varios proyectos y clientes, cumpliendo plazos de entrega.</div>
+  </div>
 
-    <div class="section">
-      <div class="mh">Perfil profesional</div>
-      <p class="summary">Ingeniero de Software con Inteligencia Artificial (SENATI) y estudiante de la carrera de Ciberseguridad. Desarrollo sitios web, sistemas full-stack y aplicaciones de escritorio en producción —desde portales educativos hasta plataformas de gestión empresarial, municipal y logística— con enfoque en código limpio, buen diseño y desarrollo seguro.</p>
-    </div>
+  <div class="section">
+    <div class="sh">Experiencia</div>
 
-    <div class="section">
-      <div class="mh">Experiencia</div>
-      <div class="item">
-        <div class="top"><span class="ti">Desarrollador Web</span><span class="yr">2023 — Hoy</span></div>
-        <div class="co">Institutos IPSE · Educa Perú · ICEPP</div>
-        <div class="de">Sitios web profesionales para institutos educativos peruanos con WordPress, HTML, CSS y JavaScript. 3 proyectos en producción con diseño responsive, SEO básico y mantenimiento continuo.</div>
-      </div>
-      <div class="item">
-        <div class="top"><span class="ti">Desarrollador Full-Stack</span><span class="yr">2024 — Hoy</span></div>
-        <div class="co">JC Insight Pro · LM-MUNIDEX</div>
-        <div class="de">Sistemas web a medida con PHP, MySQL y JavaScript: un SaaS de gestión empresarial para MYPEs y una plataforma de gestión de expedientes municipales con códigos QR y notificaciones.</div>
-      </div>
-      <div class="item">
-        <div class="top"><span class="ti">Desarrollador Python & Diseñador Freelance</span><span class="yr">2023 — Hoy</span></div>
-        <div class="co">Proyectos y clientes independientes</div>
-        <div class="de">Scripts y automatizaciones en Python con integración de IA. Diseño y maquetación de interfaces web modernas con enfoque en experiencia de usuario y rendimiento.</div>
-      </div>
-    </div>
+    <div class="job-yr">2023 – Actualidad</div>
+    <div class="job-ti">Desarrollador Web. Institutos IPSE, Educa Perú e ICEPP</div>
+    <ul class="blist">
+      <li>Desarrollo de sitios web profesionales para institutos educativos peruanos con WordPress, HTML, CSS y JavaScript.</li>
+      <li>3 proyectos en producción activa, con diseño responsive, SEO básico y mantenimiento continuo.</li>
+    </ul>
 
-    <div class="section">
-      <div class="mh">Educación</div>
-      <div class="item">
-        <div class="top"><span class="ti">Ingeniería de Software con IA</span><span class="yr">En curso</span></div>
-        <div class="co">SENATI · ID 001458147</div>
-      </div>
-      <div class="item">
-        <div class="top"><span class="ti">Ciberseguridad — Segunda carrera</span><span class="yr">En curso</span></div>
-        <div class="co">Instituto SISE</div>
-      </div>
-      <div class="item">
-        <div class="top"><span class="ti">Educación Secundaria completa</span><span class="yr">2016 — 2020</span></div>
-        <div class="co">I.E. 5123 "Francisco Bolognesi Cervantes"</div>
-      </div>
-    </div>
+    <div class="job-yr">2024 – Actualidad</div>
+    <div class="job-ti">Desarrollador Full-Stack. JC Insight Pro · LM-MUNIDEX · Alex Systems SAC</div>
+    <ul class="blist">
+      <li>Construcción de sistemas web a medida con PHP, MySQL y JavaScript: un SaaS de gestión empresarial para MYPEs y una plataforma municipal de gestión de expedientes con códigos QR.</li>
+      <li>Desarrollo de Alex Systems SAC, plataforma propia con e-commerce, pasarela de pagos e IA integrada.</li>
+    </ul>
 
-    <div class="section">
-      <div class="mh">Proyectos destacados</div>
-      <div class="proj">
-        <div class="pj"><b>Instituto IPSE</b> <span class="d">· Web</span><br><span class="u">institutoipse.edu.pe</span></div>
-        <div class="pj"><b>Instituto Educa Perú</b> <span class="d">· Web</span><br><span class="u">institutoeduca.pe</span></div>
-        <div class="pj"><b>ICEPP Instituto</b> <span class="d">· Web</span><br><span class="u">icepp.edu.pe</span></div>
-        <div class="pj"><b>JC Insight Pro</b> <span class="d">· SaaS</span><br><span class="u">jcinsightpro.store</span></div>
-        <div class="pj"><b>LM-MUNIDEX</b> <span class="d">· Sistema municipal</span><br><span class="u">lm-munidex.store</span></div>
-        <div class="pj"><b>Sistema de Gestión Logística</b> <span class="d">· Sistema institucional</span><br><span class="u">logistic-system.store</span></div>
-        <div class="pj"><b>Alex Systems SAC</b> <span class="d">· Plataforma SaaS propia</span><br><span class="u">alexsystems.com</span></div>
-        <div class="pj"><b>Viva Representaciones SAC</b> <span class="d">· Web</span><br><span class="u">vivasac.pe</span></div>
-        <div class="pj"><b>ALEX SISTEM App</b> <span class="d">· App móvil</span><br><span class="u">React Native · Expo</span></div>
-      </div>
-    </div>
-  </main>
+    <div class="job-yr">2023 – Actualidad</div>
+    <div class="job-ti">Desarrollador Python y Diseñador. Proyectos y clientes independientes</div>
+    <ul class="blist">
+      <li>Creación de scripts y automatizaciones en Python con integración de inteligencia artificial.</li>
+      <li>Diseño y maquetación de interfaces web modernas, con enfoque en experiencia de usuario y rendimiento.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="sh">Proyectos destacados</div>
+    <ul class="proj">
+      <li><b>Instituto IPSE</b> — <span>institutoipse.edu.pe</span> · Web</li>
+      <li><b>Instituto Educa Perú</b> — <span>institutoeduca.pe</span> · Web</li>
+      <li><b>ICEPP Instituto</b> — <span>icepp.edu.pe</span> · Web</li>
+      <li><b>JC Insight Pro</b> — <span>jcinsightpro.store</span> · SaaS</li>
+      <li><b>LM-MUNIDEX</b> — <span>lm-munidex.store</span> · Sistema municipal</li>
+      <li><b>Sistema de Gestión Logística</b> — <span>logistic-system.store</span> · Sistema institucional</li>
+      <li><b>Alex Systems SAC</b> — <span>alexsystems.com</span> · Plataforma SaaS propia</li>
+      <li><b>Viva Representaciones SAC</b> — <span>vivasac.pe</span> · Web</li>
+      <li><b>ALEX SISTEM App</b> — <span>React Native · Expo</span> · App móvil</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="footline"><b>Tecnologías:</b> WordPress · PHP · MySQL · Laravel · Python · JavaScript · React Native · Git &amp; GitHub · IA / ML &nbsp;&nbsp;|&nbsp;&nbsp; <b>Idiomas:</b> Español (Nativo), Inglés (Básico)</div>
+  </div>
+
 </div>
 </body>
 </html>
